@@ -12,15 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
+# Inherit common AOSP stuff.
+$(call inherit-product, vendor/aoscp/configs/common.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit telephony stuff
+$(call inherit-product, vendor/aoscp/configs/telephony.mk)
+
+$(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := cm_crackling
+PRODUCT_NAME := aoscp_crackling
 BOARD_VENDOR := wileyfox
 PRODUCT_DEVICE := crackling
 
