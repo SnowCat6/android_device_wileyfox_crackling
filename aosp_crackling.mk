@@ -14,8 +14,8 @@
 
 $(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit common AOSP stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
