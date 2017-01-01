@@ -14,13 +14,13 @@
 
 $(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common ZOS stuff.
+$(call inherit-product, vendor/zos/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := cm_crackling
+PRODUCT_NAME := zos_crackling
 BOARD_VENDOR := wileyfox
 PRODUCT_DEVICE := crackling
 
@@ -33,3 +33,6 @@ PRODUCT_BRAND := Wileyfox
 TARGET_VENDOR := wileyfox
 TARGET_VENDOR_PRODUCT_NAME := Swift
 TARGET_VENDOR_DEVICE_NAME := crackling
+
+# Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += DEVICE_MAINTAINERS="Ilya Lebedev (lol_max_lik)"
